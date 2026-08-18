@@ -1,0 +1,22 @@
+# vps — LLM-readable summary
+
+VPS setup automation: 30-minute provisioning with 25+ self-hosted apps and security hardening.
+
+## What it does
+- Base VPS setup with security hardening
+- Docker containerized environment
+- 25+ self-hosted apps: PostgreSQL, MariaDB, Redis, Nginx, Vaultwarden, Roundcube, Firefly III, Monica CRM, WireGuard, Grafana/Prometheus monitoring, SearX, Invidious, etc.
+- Ansible provisioner for repeatable deployments
+- Vagrant for local testing
+
+## Architecture
+Ansible provisioner → Base security → Docker → App containers → Monitoring → Backup
+
+## Quickstart
+```bash
+vagrant up        # Local test
+ansible-playbook site.yml  # Production deploy
+```
+
+## Repository
+https://github.com/Rawbeew/vps
